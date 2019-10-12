@@ -1,5 +1,5 @@
 import time
-from project.test_base import BaseSelenium
+from tests.test_base import BaseSelenium
 
 
 class BurgerMenuTestCase(BaseSelenium):

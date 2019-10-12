@@ -3,16 +3,9 @@ import unittest
 import time
 from selenium import webdriver
 
-from project.constants import password, login
-from project.settings import BASE_DIR, override_settings
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, MEDIA_URL[1:])
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+from constants import password, login
 
 
-@override_settings(MEDIA_URL=MEDIA_URL, MEDIA_ROOT=MEDIA_ROOT,
-                   DEFAULT_FILE_STORAGE=DEFAULT_FILE_STORAGE)
 class BaseSelenium(unittest.TestCase):
 
     def setUp(self):
