@@ -1,5 +1,9 @@
 import time
+
+from selenium.webdriver.common.keys import Keys
+
 from tests.test_base import BaseSelenium
+# import ipdb; ipdb.set_trace()
 
 
 class BurgerMenuTestCase(BaseSelenium):
