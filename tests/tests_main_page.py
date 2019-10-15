@@ -8,9 +8,7 @@ class BurgerMenuTestCase(BaseSelenium):
         """testing if exist burger button"""
         self.login()
         time.sleep(2)
-        burger_button = self.selenium.find_element_by_xpath(
-            '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/a/span[1]/i')
-        burger_button.click()
+        self.get_burger_button().click()
         drop_down_menu = self.selenium.find_element_by_class_name(
                          'dropdown-menu')
         time.sleep(2)
@@ -68,6 +66,7 @@ class BurgerMenuTestCase(BaseSelenium):
         self.assertEquals(set_words, set_text)
 
     def testing_dispatch_button(self):
+        """testing dispatch button"""
         self.login()
         dispatch_button = self.selenium.find_element_by_id(
             'info-tabs-tab-4')
