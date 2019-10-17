@@ -1,2 +1,2 @@
-login = 'aa@aa.aa'
-password = 'aaaaaa'
+LOGIN = 'aa@aa.aa'
+PASSWORD = 'aaaaaa'
