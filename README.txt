@@ -3,9 +3,9 @@
    source venv/bin/activate
 
 2) Run tests
-      python -m unittest tests.tests_main_page.BurgerMenuTestCase
-      python -m unittest tests.tests_main_page.FilterTestCase.testing_if_filter_exist
-      python -m unittest tests.tests_profile_page.MyProfileTestCase
+   python -m unittest tests.tests_main_page.BurgerMenuTestCase
+   python -m unittest tests.tests_main_page.FilterTestCase.testing_if_filter_exist
+   python -m unittest tests.tests_profile_page.MyProfileTestCase
 
 
 2) To use pdb
