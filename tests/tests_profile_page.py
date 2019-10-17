@@ -41,7 +41,4 @@ class MyProfileTestCase(MyProfileBaseTestCase):
                      'Confirm New Password', 'Submit'}
         time.sleep(2)
         self.assertEquals(set_words, set_text)
-        
-
-
 
