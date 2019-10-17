@@ -3,12 +3,15 @@
    source venv/bin/activate
 
 2) Run tests
-   python -m unittest tests.tests_main_page.BurgerMenuTestCase
+      python -m unittest tests.tests_main_page.BurgerMenuTestCase
+      python -m unittest tests.tests_main_page.FilterTestCase.testing_if_filter_exist
+      python -m unittest tests.tests_profile_page.MyProfileTestCase
+
 
 2) To use pdb
    from nose.tools import set_trace;set_trace()
 
-3) Instalation on pc
+3) Instalation on PC
    wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
    tar -zxvf geckodriver-v0.24.0-linux64.tar.gz
    chmod +x geckodriver
