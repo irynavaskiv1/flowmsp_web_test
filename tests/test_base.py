@@ -69,4 +69,3 @@ class MyProfileBaseTestCase(BaseSelenium):
 
     def tearDown(self):
         self.selenium.close()
-
