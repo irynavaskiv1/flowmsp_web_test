@@ -73,3 +73,29 @@ class MyProfileBaseTestCase(BaseSelenium):
 
     def tearDown(self):
         self.selenium.close()
+
+
+class FilerBaseTestCase(BaseSelenium):
+    def setUp(self):
+        self.selenium = webdriver.Firefox()
+        self.selenium.get(
+            '{}{}'.format('https://app.flowmsp.com', '/login'))
+        sleep(2)
+
+    def login_to_filer_block(self):
+        self.login()
+        sleep(2)
+        filter_button = self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/span[1]')
+        filter_button.click()
+
+    def get_filter_block(self):
+        return self.selenium.find_element_by_class_name('form-horizontal')
+
+    def get_back_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/div/div[2]/'
+            'div[2]/form/div[1]/span')
+
+    def tearDown(self):
+        self.selenium.close()
