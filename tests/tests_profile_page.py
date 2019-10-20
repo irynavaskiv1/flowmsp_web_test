@@ -35,12 +35,12 @@ class MyProfileTestCase(MyProfileBaseTestCase):
         """testing if exist change password page"""
         self.login_to_profile()
         self.get_change_password_button().click()
-        sleep(5)
+        sleep(3)
         change_password_alert = self.selenium.find_element_by_class_name(
             'modal-dialog')
-        sleep(1)
+        sleep(3)
         set_text = set(change_password_alert.text.split('\n'))
         set_words = {'Current Password*', 'Change Password', 'Close', '×',
                      'Confirm New Password*', 'Submit', 'New Password*'}
-        sleep(1)
+        sleep(3)
         self.assertEquals(set_text, set_words)

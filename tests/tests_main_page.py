@@ -55,14 +55,14 @@ class BurgerMenuTestCase(BaseSelenium):
         """testing building button"""
         self.login()
         building_data_button = self.selenium.find_element_by_id(
-            'info-tabs-tab-3')
+            'info-tabs-tab-2222223')
         building_data_button.click()
-        sleep(1)
+        sleep(3)
         info_building_panel = self.selenium.find_element_by_id(
             'info-tabs-pane-3')
         set_text = set(info_building_panel.text.split('\n'))
         set_words = {'Building Data', 'No building info.'}
-        sleep(1)
+        sleep(3)
         self.assertEquals(set_words, set_text)
 
     def testing_dispatch_button(self):
@@ -76,44 +76,5 @@ class BurgerMenuTestCase(BaseSelenium):
             'info-tabs-pane-4')
         set_text = set(info_dispatch_panel.text.split('\n'))
         set_words = {'No Messages.'}
-        sleep(1)
-        self.assertEquals(set_words, set_text)
-
-
-class FilterTestCase(BaseSelenium):
-
-    def testing_if_filter_exist(self):
-        """testing if exist filter button"""
-        self.login()
-        sleep(1)
-        filter_button = self.selenium.find_element_by_xpath(
-            '/html/body/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/span[1]')
-        filter_button.click()
-        filter_block = self.selenium.find_element_by_class_name(
-            'form-horizontal')
-        set_text = set(filter_block.text.split('\n'))
-        set_words = {'Partner preference', 'Building Info.', 'Buildings',
-                     'Buildings with..', 'Structures', 'Pre-plans',
-                     'Area(sq.ft.)', 'Clear', 'Sprinklered', 'Multi-family',
-                     'Exclude Partner', 'Select Pre-plans', 'Vacant',
-                     'Present', 'Standpipes', 'Within the Last 30 Days',
-                     'Special', 'Older than a year', 'Apply', 'Fire Alarms',
-                     'Commercial', 'Non-sprinklered', 'Not present',
-                     'Select Building Info Option', 'Without pictures',
-                     'Truss Roof', 'With pictures'}
-        sleep(1)
-        self.assertEquals(set_words, set_text)
-
-    def testing_if_apply_and_clear_buttons_exist(self):
-        """testing if exist apply button"""
-        self.login()
-        sleep(1)
-        filter_button = self.selenium.find_element_by_xpath(
-            '/html/body/div[1]/div/div/div[1]/div[1]/div[1]/div[2]/span[1]')
-        filter_button.click()
-        filter_block = self.selenium.find_element_by_class_name(
-            'form-group')
-        set_text = set(filter_block.text.split('\n'))
-        set_words = {'Apply', 'Clear'}
         sleep(1)
         self.assertEquals(set_words, set_text)
