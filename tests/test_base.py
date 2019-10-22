@@ -35,6 +35,9 @@ class BaseSelenium(unittest.TestCase):
         return self.selenium.find_element_by_xpath(
             '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/a/span[1]/i')
 
+    def get_navigation_drawer_button(self):
+        return self.selenium.find_element_by_id('basic-nav-dropdown')
+
     def get_my_profile_button(self):
         return self.selenium.find_element_by_xpath(
             '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/ul/li[1]/a')
@@ -99,3 +102,33 @@ class FilerBaseTestCase(BaseSelenium):
 
     def tearDown(self):
         self.selenium.close()
+
+
+class AccountInfoBaseTestCase(BaseSelenium):
+
+    def get_account_info_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/ul/li[2]')
+
+    def get_edit_account_info_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/div[1]/div[1]/div[1]/div/button[1]')
+
+    def login_to_account_info_block(self):
+        self.login()
+        self.get_navigation_drawer_button().click()
+        self.get_account_info_button().click()
+        sleep(1)
+
+
+class UploadDataBaseTestCase(BaseSelenium):
+
+    def get_upload_data_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div/div/div/nav/div/div/div[2]/ul/li/ul/li[5]/a')
+
+    def login_to_upload_data(self):
+        self.login()
+        self.get_navigation_drawer_button()
+        self.get_upload_data_button()
+        sleep(1)
