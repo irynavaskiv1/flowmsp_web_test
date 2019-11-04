@@ -1,8 +1,8 @@
 import pytest
 
 from time import sleep
+from selenium.webdriver.firefox import webdriver
 from constants import LOGIN, PASSWORD
-
 
 
 class BaseSelenium(pytest):
