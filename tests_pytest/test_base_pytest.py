@@ -4,6 +4,7 @@ from time import sleep
 from constants import LOGIN, PASSWORD
 
 
+
 class BaseSelenium(pytest):
     sleep_time = 0.5
 
@@ -34,3 +35,4 @@ class BaseSelenium(pytest):
 
     def tearDown(self):
         self.selenium.close()
+

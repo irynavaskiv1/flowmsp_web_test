@@ -5,4 +5,4 @@ class MainPageTestCase(BaseSelenium):
 
     def test_if_login_works(self):
         self.login()
-        self.assertE
+        self.assertTrue()
