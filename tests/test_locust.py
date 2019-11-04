@@ -1,35 +1,42 @@
-from locust import HttpLocust, TaskSet
-
-
-def login(l):
-    l.client.post('/login', {'username': 'aa@aa.aa',
-                             'password': 'aaaaaa'})
-
-
-def logout(l):
-    l.client.post('/logout', {'username': 'aa@aa.aa',
-                              'password': 'aaaaaa'})
-
-
-def index(l):
-    l.client.get('/')
-
-
-def profile(l):
-    l.client.get('/my-profile')
+from locust import HttpLocust, TaskSet, task
+import json
 
 
 class UserBehavior(TaskSet):
-    tasks = {index: 2, profile: 1}
+
+    def __init__(self, parent):
+        super(UserBehavior, self).__init__(parent)
+
+        self.token = 'eyJhbGciOiJIUzI1NiJ9.eyIkaW50X3Blcm1zIjpbXSwic3ViIjoib' \
+                     '3JnLnBhYzRqLmNvcmUucHJvZmlsZS5Db21tb25Qcm9maWxlIzIwN2N' \
+                     'kNWVmLTJmM2MtNDJmYS1iODc1LTczMzNiYTRhZTQ0NSIsImxpY2Vuc' \
+                     '2VUeXBlIjoiUHJldmlldyIsImN1c3RvbWVySWQiOiI0MDcxNjZmMC1' \
+                     'jZTYzLTQxZjgtOTE5MC03ZjUyMGVjZDM1NGIiLCIkaW50X3JvbGVzI' \
+                     'jpbIkFETUlOIl0sImlhdCI6MTU3MTc2OTAzMSwic2x1ZyI6ImFhYWF' \
+                     'hYSIsInVzZXJuYW1lIjoiYWFAYWEuYWEifQ.bOvsNMjT0K6SxH1zrE' \
+                     'Zc4qH86MiUn2np2WmmrPO1odg'
+        self.headers = {json}
 
     def on_start(self):
-        login(self)
+        self.token = self.login()
+        self.headers = {'Authorization': 'Token ' + self.token}
 
-    def on_stop(self):
-        logout(self)
+    def login(self):
+        response = self.client.post('/login', data={'email': 'aa@aa.aa',
+                                                    'password': 'aaaaaa',
+                                                    'Login': 'Login'})
+        return json.loads(response._content)['key']
+
+    @task(2)
+    def index(self):
+        self.client.get("/login", headers=self.headers)
+
+    @task(1)
+    def profile(self):
+        self.client.get("/my-profile/", headers=self.headers)
 
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
-    min_wait = 1000
-    max_wait = 2000
+    min_wait = 5000
+    max_wait = 9000
