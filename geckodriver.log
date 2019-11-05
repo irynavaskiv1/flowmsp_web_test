@@ -1517,3 +1517,25 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1571341466418	Marionette	INFO	Stopped listening on port 36391
+1572949010454	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.pQV5t48EKxvV"
+1572949010961	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1572949010962	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1572949010962	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1572949010962	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1572949012968	Marionette	INFO	Listening on port 40453
+1572949013065	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:07.991: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d7486fb0' of type 'MaiAtkType139'
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:07.991: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d7486f60' of type 'MaiAtkType13b'
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:07.991: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d7486ab0' of type 'MaiAtkType139'
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:17.688: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d7ff7240' of type 'MaiAtkType139'
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:17.688: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d7fdaf60' of type 'MaiAtkType13b'
+
+(firefox:17082): GLib-GObject-WARNING **: 12:17:17.688: ../../../gobject/gsignal.c:3492: signal name 'load_complete' is invalid for instance '0x7f48d772d3d0' of type 'MaiAtkType139'
+1572949046987	Marionette	INFO	Stopped listening on port 40453

@@ -1,5 +1,5 @@
 from time import sleep
-from testing.tests_unittest.tests_base import MyProfileBaseTestCase
+from testing.test_unittest.test_base import MyProfileBaseTestCase
 
 
 class MyProfileTestCase(MyProfileBaseTestCase):

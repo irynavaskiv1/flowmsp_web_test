@@ -1,5 +1,5 @@
 from time import sleep
-from testing.tests_unittest.tests_base import BaseSelenium
+from testing.test_unittest.test_base import BaseSelenium
 
 
 class BurgerMenuTestCase(BaseSelenium):

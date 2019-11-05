@@ -3,18 +3,13 @@
    source venv/bin/activate
 
 2) Run unit tests
-   python -m unittest tests.tests_main_page.FilterTestCase.testing_if_filter_exist
-   python -m unittest tests.tests_profile_page.MyProfileTestCase.testing_change_password_button
-   python -m unittest tests.tests_main_page.BurgerMenuTestCase.testing_building_data_button
-   python -m unittest tests.tests_filters.FilterTestCase.testing_if_work_back_button
-   python -m unittest tests.tests_account_info.AccountInfoTestCase.testing_edit_account_info_button
-   python -m unittest tests.tests_upload_data.UploadDataTestCase.testing_all_pages
+   python -m unittest testing.tests_unittest.tests_profile_page.MyProfileTestCase.testing_change_password_button
+
 
 3) Run pytest tests
-   python manage.py test tests_pytest.test_main_pytest.MainPageTestCase.test_if_login_works
-   python tests_pytest.test_main_pytest.MainPageTestCase.test_if_login_works
-   pytest project_web_test.tests_pytest::MainPageTestCase::test_if_login_works
-   pytest -q test_main_pytest.py
+   pytest -k "MainPageTestCase"
+   pytest testing::tests_unittest::tests_main_page_pytest.py::MainPageTestCase::test_if_login_works
+
 
 
 4) To use pdb

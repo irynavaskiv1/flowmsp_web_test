@@ -1,4 +1,4 @@
-from testing.tests_pytest import BaseSelenium
+from testing.test_pytest.test_base_pytest import BaseSelenium
 
 
 class MainPageTestCase(BaseSelenium):
@@ -7,7 +7,6 @@ class MainPageTestCase(BaseSelenium):
         self.login()
         get_info_tabs = self.selenium.find_element_by_xpath(
             '/html/body/div[1]/div/div/div[1]/div[1]/div[2]/ul')
-        set_get_info_tabs = set(self.get_info_tabs.text.split('\n'))
+        set_get_info_tabs = set(get_info_tabs.text.split('\n'))
         set_words = {'Flow', 'Location'}
         assert set_words in set_get_info_tabs
-
