@@ -1,6 +1,6 @@
 from time import sleep
 
-from tests.test_base import UploadDataBaseTestCase
+from testing.tests import UploadDataBaseTestCase
 
 
 class UploadDataTestCase(UploadDataBaseTestCase):

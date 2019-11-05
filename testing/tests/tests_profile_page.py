@@ -1,4 +1,4 @@
-from tests.test_base import MyProfileBaseTestCase
+from testing.tests import MyProfileBaseTestCase
 from time import sleep
 
 

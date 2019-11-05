@@ -1,4 +1,4 @@
-from tests_pytest.tests_base_pytest import BaseSelenium
+from testing.tests_pytest import BaseSelenium
 
 
 class MainPageTestCase(BaseSelenium):
