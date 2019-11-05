@@ -1,4 +1,4 @@
-from testing.tests_pytest import BaseSelenium
+from testing.tests_pytest.tests_base_pytest import BaseSelenium
 
 
 class MainPageTestCase(BaseSelenium):
@@ -10,4 +10,3 @@ class MainPageTestCase(BaseSelenium):
         set_get_info_tabs = set(self.get_info_tabs.text.split('\n'))
         set_words = {'Flow', 'Location'}
         assert set_words in set_get_info_tabs
-

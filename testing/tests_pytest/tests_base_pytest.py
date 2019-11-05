@@ -35,4 +35,3 @@ class BaseSelenium(pytest):
 
     def tearDown(self):
         self.selenium.close()
-
