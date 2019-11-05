@@ -1,4 +1,8 @@
+<<<<<<< HEAD:testing/test_pytest/test_main_page_pytest.py
 from testing.test_pytest.test_base_pytest import BaseSelenium
+=======
+from testing.tests_pytest.tests_base_pytest import BaseSelenium
+>>>>>>> fe5d25ce50126d084f5a86290e3e95b1c1acf8ee:testing/tests_pytest/tests_main_page_pytest.py
 
 
 class MainPageTestCase(BaseSelenium):
