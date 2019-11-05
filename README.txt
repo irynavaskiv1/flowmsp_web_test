@@ -8,7 +8,7 @@
 
 3) Run pytest tests
    pytest -k "MainPageTestCase"
-   pytest testing::tests_unittest::tests_main_page_pytest.py::MainPageTestCase::test_if_login_works
+   pytest testing::test_unittest::test_main_page_pytest.py::MainPageTestCase::test_if_login_works
 
 
 
