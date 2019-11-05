@@ -16,6 +16,7 @@
    pytest project_web_test.tests_pytest::MainPageTestCase::test_if_login_works
    pytest -q test_main_pytest.py
 
+
 4) To use pdb
    from nose.tools import set_trace;set_trace()
 

@@ -1,5 +1,5 @@
 from time import sleep
-from tests.test_base import FilerBaseTestCase
+from testing.tests_unittest.tests_base import FilerBaseTestCase
 
 
 class FilterTestCase(FilerBaseTestCase):
