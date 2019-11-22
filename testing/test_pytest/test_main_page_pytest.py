@@ -10,14 +10,3 @@ class MainPageTestCase(BaseSelenium):
         set_get_info_tabs = set(get_info_tabs.text.split('\n'))
         set_words = {'Flow', 'Location'}
         assert set_words in set_get_info_tabs
-
-
-class TestClass:
-
-    def test_one(self):
-        x = "this"
-        assert "h" in x
-
-    def test_two(self):
-        x = "hello"
-        assert hasattr(x, "check")
