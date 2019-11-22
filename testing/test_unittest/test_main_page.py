@@ -22,8 +22,6 @@ class BurgerMenuTestCase(BaseSelenium):
     def testing_flow_button(self):
         """testing flow button"""
         self.login()
-        flow_button = self.selenium.find_element_by_id('info-tabs-tab-1')
-        flow_button.click()
         sleep(1)
         info_flow_panel = self.selenium.find_element_by_class_name(
             'tab-content')
@@ -39,11 +37,13 @@ class BurgerMenuTestCase(BaseSelenium):
     def testing_location_button(self):
         """testing location button"""
         self.login()
-        location_button = self.selenium.find_element_by_id('info-tabs-tab-2')
-        location_button.click()
+        sleep(3)
+        self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/div[1]/div[1]/div[2]/ul/li[2]').click()
         sleep(1)
-        info_location_panel = self.selenium.find_element_by_id(
-            'info-tabs-pane-2')
+        info_location_panel = self.selenium.find_element_by_xpath(
+            '//*[@id="info-tabs-pane-2"]')
+        sleep(3)
         set_text = set(info_location_panel.text.split('\n'))
         set_words = {'Location Data', 'Flow Data', 'Hydrant Information',
                      'Selected Hydrants: 0', 'No location selected.',
@@ -54,9 +54,9 @@ class BurgerMenuTestCase(BaseSelenium):
     def testing_building_data_button(self):
         """testing building button"""
         self.login()
-        building_data_button = self.selenium.find_element_by_id(
-            'info-tabs-tab-3')
-        building_data_button.click()
+        sleep(3)
+        self.selenium.find_element_by_xpath(
+            '//*[@id="info-tabs-tab-3"]').click()
         sleep(1)
         info_building_panel = self.selenium.find_element_by_id(
             'info-tabs-pane-3')
@@ -68,9 +68,9 @@ class BurgerMenuTestCase(BaseSelenium):
     def testing_dispatch_button(self):
         """testing dispatch button"""
         self.login()
-        dispatch_button = self.selenium.find_element_by_id(
-            'info-tabs-tab-4')
-        dispatch_button.click()
+        sleep(3)
+        self.selenium.find_element_by_xpath(
+            '//*[@id="info-tabs-tab-4"]').click()
         sleep(1)
         info_dispatch_panel = self.selenium.find_element_by_id(
             'info-tabs-pane-4')
