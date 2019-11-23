@@ -1,10 +1,12 @@
+This is a test case program that tests this site: https://app.flowmsp.com/my-profile .
+
 1) Create environment
    python3 -m venv venv
    source venv/bin/activate
 
 2) Run unit tests
    python -m unittest testing.test_unittest.test_main_page.BurgerMenuTestCase.testing_if_exist_burger_menu
-   python -m unittest testing.test_unittest.test_main_page.BurgerMenuTestCase.testing_if_exist_burger_menu
+   python -m unittest testing.test_unittest.test_profile_page.MyProfileTestCase.test_exist_my_profile_page
 
 
 3) Run pytest tests
