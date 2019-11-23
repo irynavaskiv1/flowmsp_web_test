@@ -7,14 +7,15 @@ class MyProfileTestCase(MyProfileBaseTestCase):
     def test_exist_my_profile_page(self):
         """testing if profile page has all fields"""
         self.login_to_profile()
-        all_page_text = self.selenium.find_element_by_class_name(
-            'main-container')
+        sleep(2)
+        all_page_text = self.selenium.find_element_by_xpath(
+            '/html/body/div/div/div')
         sleep(1)
         set_text = set(all_page_text.text.split('\n'))
         set_words = {'First Name:', 'Last Name:', 'Role:', 'Customer Name:',
-                     'ADMIN', 'Pre-plans183No. of Hydrants292', 'My Profile',
-                     'Email:', 'aa@aa.aa', 'Edit ProfileChange Password',
-                     'aaaaaa'}
+                     'ADMIN', 'My Profile', 'Email:', 'aa@aa.aa',
+                     'Edit ProfileChange Password', 'aaaaaa',
+                     'Pre-plans189No. of Hydrants361'}
         sleep(1)
         self.assertEquals(set_words, set_text)
 

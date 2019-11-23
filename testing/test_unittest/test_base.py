@@ -33,7 +33,7 @@ class BaseSelenium(unittest.TestCase):
 
     def get_burger_button(self):
         return self.selenium.find_element_by_xpath(
-            '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/a/span[1]/i')
+            '/html/body/div/div/div/nav/div/div/div[2]/ul/li/a/span[1]/i')
 
     def get_navigation_drawer_button(self):
         return self.selenium.find_element_by_xpath(
