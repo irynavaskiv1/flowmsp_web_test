@@ -36,7 +36,8 @@ class BaseSelenium(unittest.TestCase):
             '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/a/span[1]/i')
 
     def get_navigation_drawer_button(self):
-        return self.selenium.find_element_by_id('basic-nav-dropdown')
+        return self.selenium.find_element_by_xpath(
+            '//*[@id="basic-nav-dropdown"]')
 
     def get_my_profile_button(self):
         return self.selenium.find_element_by_xpath(
@@ -129,6 +130,7 @@ class UploadDataBaseTestCase(BaseSelenium):
 
     def login_to_upload_data(self):
         self.login()
-        self.get_navigation_drawer_button()
-        self.get_upload_data_button()
-        sleep(1)
+        sleep(3)
+        self.get_navigation_drawer_button().click()
+        self.get_upload_data_button().click()
+        sleep(4)
