@@ -134,3 +134,21 @@ class UploadDataBaseTestCase(BaseSelenium):
         self.get_navigation_drawer_button().click()
         self.get_upload_data_button().click()
         sleep(4)
+
+
+class DataSharingBaseTestCase(BaseSelenium):
+
+    def get_data_sharing_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li/ul/li[4]')
+
+    def burger_button(self):
+        return self.selenium.find_element_by_xpath(
+            '/html/body/div[1]/div/div/nav/div/div/div[2]/ul/li')
+
+    def login_to_data_sharing(self):
+        self.login()
+        sleep(3)
+        self.burger_button().click()
+        self.get_data_sharing_button().click()
+        sleep(4)
